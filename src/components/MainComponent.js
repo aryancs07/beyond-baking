@@ -13,15 +13,15 @@ import { PROMOTIONS } from '../shared/promotions';
 import { LEADERS } from '../shared/leaders';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import { Navbar,NavbarBrand,Badge} from 'reactstrap' ;
+
 class Main extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             dishes: DISHES,  // lifting the state up
-            comments: COMMENTS, 
-            leaders: LEADERS, 
-            promotions: PROMOTIONS
+            
         };
     }
 
@@ -46,6 +46,17 @@ class Main extends Component {
 
         return (
             <div>
+                <Navbar dark color ="light">
+              <div className="container">
+                <NavbarBrand href="/">
+                  <div className="row">
+                     <div className="col-3"><Badge href="#" color="info" >Basic</Badge></div>
+                     <div className="col-4"><Badge href="#" color="info" >Classics</Badge></div>
+                     <div className="col-4"><Badge href="#" color="info" >Specials</Badge></div>
+                  </div>
+                  </NavbarBrand>
+              </div>
+            </Navbar>
                 <Header />
                     <Switch> 
                         <Route path='/home' component={HomePage} />

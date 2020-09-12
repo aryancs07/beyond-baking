@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-
-import { Card, CardImg, CardImgOverlay, CardText, CardBody,
+import React, { Component, Fragment } from 'react';
+import { Media } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,
   CardTitle } from 'reactstrap';
+  import { Alert } from 'reactstrap';
 
 class Menu extends Component {
           
@@ -57,20 +58,34 @@ class Menu extends Component {
 
       const menu = this.props.dishes.map((dish) => {
           return (
+            <Fragment>    
+             
+          
             <div  className="col-12 col-md-5 m-1">
               <Card key={dish.id}
                 onClick={() => this.onDishSelect(dish)}>
                 <CardImg width="100%" src={dish.image} alt={dish.name} />
-                <CardImgOverlay>
+                {/* <CardImgOverlay>
                     <CardTitle>{dish.name}</CardTitle>
-                </CardImgOverlay>
+                </CardImgOverlay> */}
+                <Alert color="warning">
+                    {dish.description}
+                </Alert>
                 </Card>
-                <button onClick={this.handleDecrement} className="btn btn-secondary btn-sm">-</button>
-                <span style={this.styles} className={ this.getBadgeClasses()}>{this.formatCount()}</span>
-                <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">+</button>
+                <Media body className="ml-2">
+                    <Media heading>{dish.name}</Media>
+                    <button onClick={this.handleDecrement} className="btn btn-secondary btn-sm">-</button>
+                    <span style={this.styles} className={ this.getBadgeClasses()}>{this.formatCount()}</span>
+                    <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">+</button>
+                      <p>
+                        <h4>{dish.price}</h4>
+                       </p>
+                   </Media>
+                
                 </div>
-                 
+                </Fragment>  
           );
+
       });
 
       return (

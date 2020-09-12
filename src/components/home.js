@@ -1,8 +1,8 @@
-export const DISHES =
+export const HOME =
     [
         {
         id: 0,
-        name:'Kitkat Cake',
+        name:'Kitkat',
         image: 'assets/images/kitkat.jpeg',
         category: 'mains',
         label:'Hot',

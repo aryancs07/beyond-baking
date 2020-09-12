@@ -10,15 +10,13 @@ import {
   DropdownItem,
 } from 'reactstrap';
 import Menu from './components/MenuComponent';
-import Home from './homeComponent';
 //import Example from './components/carousel'
 import { DISHES } from './shared/dishes';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+//import './App.css';
 import React from 'react';
-import { HOME } from './components/home';
 
-class App extends Component {
+class Home extends Component {
   
 
   constructor(props) {
@@ -26,7 +24,7 @@ class App extends Component {
       this.state = {
           dishes: DISHES,
          // carousel: Example
-         home:HOME
+         
        };
     }
     
@@ -36,14 +34,14 @@ class App extends Component {
         return (
           <div>
             <Navbar color="danger" light expand="md">
-            <NavbarBrand href="/">Beyond Baking</NavbarBrand>
+            <NavbarBrand href="/">Beyond</NavbarBrand>
             
               <Nav className="mr-auto" navbar>
                 <NavItem>
-                  <NavLink href="/components/homeComponent">Home</NavLink>
+                  <NavLink href="/components/">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="./components/AboutComponent">About</NavLink>
+                  <NavLink href="https://github.com/reactstrap/reactstrap">About</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink href="./components/MenuComponent">Menu</NavLink>
@@ -119,10 +117,6 @@ class App extends Component {
       )
           <div>
               <Menu dishes={this.state.dishes} />
-              
-          </div>
-          <div>
-            <Home home={this.state.home} />
           </div>
            
           </div>       
@@ -132,4 +126,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default Home;
