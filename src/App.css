@@ -1,9 +1,92 @@
 .jumb{
   padding:70px 30px 70px 30px;
   margin:10px auto;
-  background-image: url("./back1.jpeg");
-  background-position: 100% 50%;
+  background-image: url("./back1.jpeg") ;
+  background-repeat: no-repeat;
+  /* background-position: 100% 50%; */
+  background-size: cover;
+  background-position: center;
   font-style: italic;
-  color:black
+  color:black;
+  overflow: none;
   
+}
+.footer{
+  background-color: #D1C4E9;
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+}
+address{
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
+}
+.jumbotron {
+  padding:70px 30px 70px 30px;
+  margin:0px auto;
+  
+  color:floralwhite;
+}
+.navbar-dark {
+  background-color: #512DA8;
+}
+.row-header{
+  margin:0px auto;
+  padding:0px auto;
+}
+
+.row-content {
+  margin:0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height:400px;
+}
+
+.login h2,
+.register h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.login a {
+  text-align: center;
+}
+
+input[type='text'] {
+  background-color: #e6e6e6;
+  color: #827ffe;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  width: 50%;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+input[type='password'] {
+  background-color: #e6e6e6;
+  padding: 20px 30px;
+  color: #827ffe;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  width: 50%;
+  text-align: center;
+}
+
+input[type='submit'] {
+  padding: 15px 0px;
+  background-color: #827ffe;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  width: 500%;
+  text-align: center;
+}
+
+.check {
+  font-size: 16px;
 }

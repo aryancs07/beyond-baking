@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Media } from 'reactstrap';
 import { Card, CardImg, CardText, CardBody,
   CardTitle } from 'reactstrap';
-  import { Alert } from 'reactstrap';
+import { Alert } from 'reactstrap';
+import { Navbar,NavbarBrand,Badge} from 'reactstrap' ;
 
 class Menu extends Component {
           
@@ -31,6 +32,7 @@ class Menu extends Component {
   renderDish(dish) {
       if (dish != null)
           return(
+            
               <Card>
                   <CardImg top src={dish.image} alt={dish.name} />
                   <CardBody>
@@ -38,6 +40,7 @@ class Menu extends Component {
                     <CardText>{dish.description}</CardText>
                   </CardBody>
               </Card>
+            
           );
       else
           return(
@@ -89,6 +92,18 @@ class Menu extends Component {
       });
 
       return (
+        <div>
+        <Navbar dark color ="light">
+        <div className="container">
+        <NavbarBrand href="/"> Beyond Baking
+          <div className="row">
+             <div className="col-3"><Badge href="#" color="info" >Basic</Badge></div>
+             <div className="col-4"><Badge href="#" color="info" >Classics</Badge></div>
+             <div className="col-4"><Badge href="#" color="info" >Specials</Badge></div>
+          </div>
+          </NavbarBrand>
+       </div>
+        </Navbar>
           <div className="container">
               <div className="row">
                   {menu}
@@ -98,6 +113,7 @@ class Menu extends Component {
                   {this.renderDish(this.state.selectedDish)}
                 </div>
               </div>
+          </div>
           </div>
       );
   }

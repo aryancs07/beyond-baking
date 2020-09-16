@@ -1,78 +1,25 @@
 import {Component} from 'react';
-import { Navbar,NavbarBrand,Container} from 'reactstrap' ;
-import {
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
-import Menu from './components/MenuComponent';
-import Home from './homeComponent';
+import {BrowserRouter} from 'react-router-dom';
+import Main from './components/MainComponent';
+// import Home from './homeComponent';
 //import Example from './components/carousel'
-import { DISHES } from './shared/dishes';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React from 'react';
-import { HOME } from './components/home';
+//import { HOME } from './components/home';
 
 class App extends Component {
   
-
-  constructor(props) {
-      super(props);
-      this.state = {
-          dishes: DISHES,
-         // carousel: Example
-         home:HOME
-       };
-    }
     
      
     render() {
         
         return (
+          <BrowserRouter>
           <div>
-            <Navbar color="danger" light expand="md">
-            <NavbarBrand href="/">Beyond Baking</NavbarBrand>
             
-              <Nav className="mr-auto" navbar>
-                <NavItem>
-                  <NavLink href="/components/homeComponent">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="./components/AboutComponent">About</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="./components/MenuComponent">Menu</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="./components/contactComponent">Contact us</NavLink>
-                </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    My Account
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>
-                      Sign up
-                    </DropdownItem>
-                    
-                    <DropdownItem divider />
-                    <DropdownItem>
-                      Sign in 
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Nav>
-            
-            
-          </Navbar>
-            <div className="jumb">
-            
-              <div className='row row-header'>
+            {/* <div className="jumb">
+            <div className='row row-header'>
                 <div className="col-6">
                 <img src="logo.jpeg" alt="logo"></img>
                 </div>
@@ -83,50 +30,20 @@ class App extends Component {
               </Container>
               </div>
               </div>
-              
            </div>
           <div>
-          <Navbar color="light" light expand="md">
-            <NavbarBrand href="/">Beyond Baking</NavbarBrand>
-            
-              <Nav className="mr-auto" navbar>
-                <NavItem>
-                  <NavLink href="/components/">Classics</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-                </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    My Account
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>
-                      Sign up
-                    </DropdownItem>
-                    
-                    <DropdownItem divider />
-                    <DropdownItem>
-                      Sign in 
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Nav>
-            
-            
-          </Navbar>
-        </div>
-      )
+          
+        </div> */}
+      
           <div>
-              <Menu dishes={this.state.dishes} />
-              
+              <Main />
           </div>
-          <div>
+          {/* <div>
             <Home home={this.state.home} />
-          </div>
-           
+          </div> */}
+          
           </div>       
-        
+          </BrowserRouter>
     );
 }
 }
