@@ -22,13 +22,34 @@ address{
   color:#0f0f0f;
 }
 .jumbotron {
+  margin:120px 10px auto;
   padding:70px 30px 70px 30px;
-  margin:0px auto;
-  
-  color:floralwhite;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./daisy-floral-cake.jpg);
+  color: black;
+  /* display:inline-block; */
+  position:relative;
 }
+
+.jumbotron a{
+  position: static;
+  bottom:4em;
+  right:4em;
+  background-color:#e04247;
+  border-radius:1.5em;
+  color:white;
+  text-transform:uppercase;
+  padding:1em 1.5em;
+  }
+
 .navbar-dark {
-  background-color: #512DA8;
+  /* background-color: rgb(205, 105, 92); */
+  background-color:rgb(53, 181, 231);
+}
+.NavMenu{
+  margin: 50px 20px 20px 20px auto;
+  padding:70px 30px 70px 30px;
 }
 .row-header{
   margin:0px auto;
@@ -47,10 +68,29 @@ address{
   font-size: 45px;
   text-transform: uppercase;
   text-align: center;
+  padding:70px 30px 70px 30px;
 }
 
 .login a {
   text-align: center;
+  
+}
+form { 
+	width: 600px; 
+	margin: auto;
+	padding: 5px; 
+	border: solid black 1px;	
+	border-radius: 5px;  
+  box-shadow: 5px 5px 2px #888;
+    
+}
+.fullpage{
+    margin: 20px;
+}
+input:focus, 
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
 }
 
 input[type='text'] {
@@ -59,7 +99,7 @@ input[type='text'] {
   font-size: 16px;
   margin-bottom: 20px;
   border: none;
-  width: 50%;
+  width: 100%;
   padding: 20px 30px;
   text-align: center;
 }
@@ -71,7 +111,7 @@ input[type='password'] {
   font-size: 16px;
   margin-bottom: 20px;
   border: none;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 
@@ -89,4 +129,17 @@ input[type='submit'] {
 
 .check {
   font-size: 16px;
+}
+.btn-social-icon{
+  padding: 6px 15px 8px ;
+  margin: 0px 10px 0px 0px;
+}
+.classname{
+  align-items: center; 
+}
+.register{
+  background-image: url(./components/loginback.png);
+}
+.btnhome{
+  padding: 240px 100px 10px 10px;
 }

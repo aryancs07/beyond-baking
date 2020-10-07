@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import {  } from 'react-router-dom';
+import { Button} from 'reactstrap';
+
 
 class Login extends Component {
 	constructor(props) {
@@ -35,10 +37,16 @@ class Login extends Component {
 
 	render() {
 		return (
-			<div className="login">
-				<form onSubmit={this.displayLogin}>
+			<div className="register">
+			<div className="container">
+			<br/><br/><br/><br/>
+			<br/>
+				<form onSubmit={this.displayLogin} className="col-12 col-sm-6 mr-auto">
+					
+					<div className="fullpage">
 					<h2>Login</h2>
-					<div className="username">
+					
+					<div className="username" id="username">
 						<input
 							type="text"
 							placeholder="Username..."
@@ -48,20 +56,46 @@ class Login extends Component {
 						/>
 					</div>
 
-					<div className="password">
-						<input
+					<div className="password" id="password">
+						<input 
 							type="password"
 							placeholder="Password..."
 							value={this.state.password}
 							onChange={this.update}
 							name="password"
 						/>
+					
 					</div>
+{/* 
+					<input type="submit" value="Login" placeholder="Login"/> */}
+					<Button className="col-12 col-sm-6" type="submit" value="login" id="loginbutton">Login</Button><br/><br/>
+							<h5 >OR</h5>
+						<div className="phonelogin" id="phonelogin">
+						<input
+							type="text"
+							placeholder="Phone no."
+							value={this.state.phone}
+							onChange={this.update}
+							name="phonelogin"
+						/>
+					</div>
+					<Button className="col-12 col-sm-6" type="submit" value="">Send an OTP</Button>
+					<br/>
+				
+				<br/>
+				<Button variant="secondary" href="/register" >
+				Create new Account
+				</Button>
+				</div>
+			</form>
+			<br/>
+		
+				
+			<br/>
+			
+			<br/>
 
-					<input type="submit" value="Login" />
-				</form>
-
-				<Link to="/register">Create an account</Link>
+			</div>
 			</div>
 		);
 	}

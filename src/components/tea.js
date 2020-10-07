@@ -4,13 +4,13 @@ import { Card, CardImg } from 'reactstrap';
 import { Alert } from 'reactstrap';
 import { Navbar,NavbarBrand,Badge} from 'reactstrap' ;
 
-class Menu extends Component {
+class Tea extends Component {
           
       state = {
       selectedDish: null,
-      count:0  
+      count:0 ,
+    
      };
-     
  /* constructor(props) {
       super(props);
       this.handleIncrement = this.handleIncrement.bind(this);
@@ -29,7 +29,6 @@ class Menu extends Component {
       this.setState({ selectedDish: dish});
     }
 
-  
   formatCount(){
     const { count } = this.state;
     return count === 0 ? "Zero" : count;
@@ -41,20 +40,16 @@ class Menu extends Component {
   
   render() {
     
-
-      const menu = this.props.dishes.map((dish) => {
-      
-          
+    
+      const menu2 = this.props.tea.map((dish) => {
+    
           return (
              <Fragment>    
              <div  className="col-12 col-md-5 m-1">
               <Card key={dish.id}
                 onClick={() => this.onDishSelect(dish)}>
                 <CardImg width="100%" src={dish.image} alt={dish.name} />
-                {/* <CardImgOverlay>
-                    <CardTitle>{dish.name}</CardTitle>
-                </CardImgOverlay> */}
-                <Alert color="warning">
+              <Alert color="warning">
                     {dish.description}
                 </Alert>
                 </Card>
@@ -65,8 +60,8 @@ class Menu extends Component {
                     <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">+</button>
                       <p>
                         <h4>{dish.price}</h4>
-                      </p>
-            
+                        
+                       </p>
                    </Media>
                 
                 </div>
@@ -75,7 +70,7 @@ class Menu extends Component {
           );
 
       });
-
+  
       return (
         <div>
           <div className='NavMenu'>
@@ -94,15 +89,9 @@ class Menu extends Component {
           <div className="container">
            
               <div className="row">
-                <div >
-                  {menu}
-                </div>
+                  {menu2}
               </div>
-              {/* <div className="row">
-                <div  className="col-12 col-md-5 m-1">
-                  {this.renderDish(this.state.selectedDish)}
-                </div>
-              </div> */}
+             
           </div>
           </div>
       );
@@ -115,4 +104,4 @@ class Menu extends Component {
   }
 }
 
-export default Menu;
+export default Tea;

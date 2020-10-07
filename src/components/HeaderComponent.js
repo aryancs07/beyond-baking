@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Jumbotron, Nav,NavItem,NavbarToggler,
+import { Navbar, NavbarBrand,  Nav,NavItem,NavbarToggler,
     NavLink, UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -24,17 +24,15 @@ class Header extends Component {
   render() {
     return(
     <React.Fragment>
-      <Navbar dark expand='md'>
-        <div className="container ">
+      <Navbar dark expand='md fixed-top'>
+        <div className="container">
         <NavbarToggler onClick={this.toggleNav} />
         <NavbarBrand className="mr-auto" href="/">
-          <img src='assets/images/logo.jpeg' height="60" width="60" alt='Ristorante Con Fusion' />
+          <img src='assets/images/logo.jpeg' height="60" width="60" alt='Beyond baking' />
           </NavbarBrand>
           </div>
-          <Collapse isOpen={this.state.isNavOpen} navbar>
-
-        
-        <Nav className="mr-auto" navbar>
+              <Collapse isOpen={this.state.isNavOpen} navbar>
+              <Nav className="mr-auto" navbar>
             <NavItem>
                <NavLink className="nav-link"  to='/home' href='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
             </NavItem>
@@ -45,38 +43,28 @@ class Header extends Component {
               <NavLink className="nav-link"  to='/menu' href='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" to='/contactus' href='/'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
+              <NavLink className="nav-link" to='/contact' href='/contact'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
             </NavItem>
-                            
+           
                 <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
                     My Account
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <DropdownItem>
-                    <NavLink className="nav-link" to='/register' href='/login'>
-                      LOgin
-                      </NavLink>
+                    <DropdownItem href='/login'>
+                   Login
                     </DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>
+                    <DropdownItem href='/register'>
                       Register
                     </DropdownItem>
+                   
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </Nav>
               </Collapse>
     </Navbar>
-      <Jumbotron>
-           <div className="container">
-               <div className="row row-header">
-                   <div className="col-12 col-sm-6">
-                       <h1>Beyond Baking</h1>
-                       <p>Fusion Beyond imagination</p>
-                   </div>
-               </div>
-           </div>
-       </Jumbotron>
+      
     </React.Fragment>
     );
   }

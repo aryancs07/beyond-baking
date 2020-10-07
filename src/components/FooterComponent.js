@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
 
 function Footer(props) {
     return(
@@ -25,12 +26,16 @@ function Footer(props) {
 		              <i className="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
 		              <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">
                          confusion@food.net</a>
+                         <br/><br/>
+                    <Button style={{display: "table-cell"}} target="blank" href="https://www.google.com/maps/place/Arcade+Silver+56,+Near+56+Dukan,+11+Bungalow+Colony,+New+Palasia,+Indore,+Madhya+Pradesh+452001/@22.7247689,75.881751,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x3962fd40bfffffff:0xd6e04b83137ffc6f!2sLucknowi+zaika!8m2!3d22.7247689!4d75.8839397!3m4!1s0x3962fd3895e51ee9:0x6ddfe5935a90d784!8m2!3d22.7247689!4d75.8839397">
+                        Open in Map
+                    </Button>
                     </address>
                 </div>
                 <div className="col-12 col-sm-4 align-self-center">
                     <div className="text-center">
-                        <a className="btn btn-social-icon btn-instagram" href="http://instagram.com+/"><i className="fa fa-instagram"></i></a>
-                        <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i className="fa fa-facebook"></i></a>
+                        <a className="btn btn-social-icon btn-instagram" href="http://instagram.com+/"> <i className="fa fa-instagram"></i></a>
+                        <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="> <i className="fa fa-facebook"></i></a>
                         <a className="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i className="fa fa-linkedin"></i></a>
                         <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i className="fa fa-twitter"></i></a>
                         <a className="btn btn-social-icon btn-google" href="http://youtube.com/"><i className="fa fa-youtube"></i></a>

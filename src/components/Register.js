@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
+import { Button, Card} from 'reactstrap';
 
 class Register extends Component {
 	constructor(props) {
@@ -8,7 +9,8 @@ class Register extends Component {
 		this.state = {
 			fullname: '',
 			email: '',
-			password: ''
+			password: '',
+			phone:''
 		};
 
 		this.update = this.update.bind(this);
@@ -30,6 +32,7 @@ class Register extends Component {
 		console.log(this.state);
 		this.setState({
 			fullname: '',
+			phone:'',
 			email: '',
 			password: ''
 		});
@@ -38,10 +41,13 @@ class Register extends Component {
 	render() {
 		return (
 			<div className="register">
-				<form onSubmit={this.displayLogin}>
+				<div className="container">
+				<br/><br/><br/><br/>
+					<Card> <br/><br/>
+				<form onSubmit={this.displayLogin} className="col-12 col-sm-6" >
 					<h2>Register</h2>
 
-					<div className="name">
+					<div className="name" id="name" >
 						<input
 							type="text"
 							placeholder="Full Name"
@@ -51,7 +57,7 @@ class Register extends Component {
 						/>
 					</div>
 
-					<div className="email">
+					<div className="email" id="email">
 						<input
 							type="text"
 							placeholder="Enter your email"
@@ -61,7 +67,17 @@ class Register extends Component {
 						/>
 					</div>
 
-					<div className="pasword">
+					<div className="phone" id="phone">
+						<input
+							type="text"
+							placeholder="Phone No."
+							phone="phone"
+							value={this.state.phone}
+							onChange={this.update}
+						/>
+					</div>
+
+					<div className="pasword" id="password">
 						<input
 							type="password"
 							placeholder="Password"
@@ -71,14 +87,21 @@ class Register extends Component {
 						/>
 					</div>
 
-					<div className="password">
+					<div className="password" id="confirmpassword">
 						<input type="password" placeholder="Confirm Password" name="password1" />
 					</div>
 
-					<input type="submit" value="Login" />
-				</form>
+					<Button className="col-12 col-sm-6" type="submit" value="register" id="registerbutton">Register</Button><br/><br/>
 
-				<Link to="/">Login Here</Link>
+					
+				<Button variant="secondary" href="/login" >
+				Login
+				</Button>
+				<br/>
+				</form><br/>
+				</Card>
+				<br/>
+			</div>
 			</div>
 		);
 	}
